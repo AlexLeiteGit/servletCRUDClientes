@@ -24,19 +24,19 @@ public class ListaClienteServlet extends HttpServlet {
 		Banco banco = new Banco();
 		List<Cliente> lista = banco.getCliente();
 		
-		PrintWriter out = response.getWriter();
-		
-		out.println("<html><body>");
-		out.println("<ul>");
-		
-		for(Cliente cliente : lista) {
-			out.print("<li>" + cliente.getNome() + " " + cliente.getSobrenome()
-			+ " " + cliente.getCelular() + "</li>");
-			System.out.println();
-		}
-		
-		out.println("</ul>");
-		out.println("</body></html>");
+//		PrintWriter out = response.getWriter();
+//		
+//		out.println("<html><body>");
+//		out.println("<ul>");
+//		
+//		for(Cliente cliente : lista) {
+//			out.print("<li>" + cliente.getNome() + " " + cliente.getSobrenome()
+//			+ " " + cliente.getCelular() + "</li>");
+//			System.out.println();
+//		}
+//		
+//		out.println("</ul>");
+//		out.println("</body></html>");
 	}
 
 }

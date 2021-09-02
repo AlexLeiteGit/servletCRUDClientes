@@ -19,4 +19,9 @@ public class Banco {
 		return Banco.lista;
 	}
 
+	public void adicionar(Cliente cliente) {
+		lista.add(cliente);
+		
+	}
+
 }

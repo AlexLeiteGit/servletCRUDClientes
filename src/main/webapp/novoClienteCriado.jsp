@@ -8,5 +8,12 @@
 </head>
 <body>
 
+<%
+	String nomeCliente = (String) request.getAttribute("cliente");
+	System.out.println(nomeCliente);
+%>
+
+Cliente <%= nomeCliente %> cadastrado com sucesso!
+
 </body>
 </html>
