@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:url value="/entrada" var="linkEntradaServlet" />
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,15 +8,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/servletCRUDClientes/novoCliente" method="post">
 
-Nome: <input type="text" name="nome" />
-Sobrenome: <input type="text" name="sobrenome" />
-Idade: <input type="text" name="idade" />
-Celular: <input type="tel" name="celular" />
+	<form action="${linkEntradaServlet}" method="post">
+	
+		Nome: <input type="text" name="nome" />
+		Sobrenome: <input type="text" name="sobrenome" />
+		Celular: <input type="tel" name="celular" />
+		
+		<input type="hidden" name="acao" value="NovoCliente">
+		
+		
+		<input type="submit" />
+	
+	</form>
 
-<input type="submit" />
-
-</form>
 </body>
 </html>

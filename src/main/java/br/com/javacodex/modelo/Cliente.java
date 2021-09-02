@@ -1,5 +1,7 @@
 package br.com.javacodex.modelo;
 
+import java.util.Date;
+
 public class Cliente {
 	
 	private Integer id;
@@ -7,6 +9,9 @@ public class Cliente {
 	private String sobrenome;
 	private String idade;
 	private String celular;
+	private Date dataCadastro = new Date();
+	
+	
 	public Integer getId() {
 		return id;
 	}
@@ -37,7 +42,10 @@ public class Cliente {
 	public void setCelular(String celular) {
 		this.celular = celular;
 	}
-	
-	
-
+	public Date getDataCadastro() {
+		return dataCadastro;
+	}
+	public void setDataCadastro(Date dataCadastro) {
+		this.dataCadastro = dataCadastro;
+	}
 }

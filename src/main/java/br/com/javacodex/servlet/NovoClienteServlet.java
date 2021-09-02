@@ -36,7 +36,7 @@ public class NovoClienteServlet extends HttpServlet {
 //		PrintWriter out = response.getWriter();
 //		out.println("<html><body>Cliente " + nomeCliente + " Cadastrado com sucesso</body></html>");
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/listaCliente.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/listaCliente");
 		request.setAttribute("cliente", cliente.getId());
 		request.setAttribute("cliente", cliente.getNome());
 		request.setAttribute("cliente", cliente.getSobrenome());
