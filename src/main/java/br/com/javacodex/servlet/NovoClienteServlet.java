@@ -21,7 +21,7 @@ public class NovoClienteServlet extends HttpServlet {
 		String celularCleinte = request.getParameter("celular");
 		
 		PrintWriter out = response.getWriter();
-		out.println("<html><body>Cliente " + nomeCliente + " Cadastrado com sudcesso</body></html>");
+		out.println("<html><body>Cliente " + nomeCliente + " Cadastrado com sucesso</body></html>");
 		
 	}
 
