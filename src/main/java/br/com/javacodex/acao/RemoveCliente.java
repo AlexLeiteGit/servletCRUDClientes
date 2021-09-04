@@ -12,7 +12,7 @@ public class RemoveCliente {
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		System.out.println("removendo clientes");
+		System.out.println("Removendo Clientes");
 		
 		String paramId = (String) request.getParameter("id");
 		Integer id = Integer.valueOf(paramId);

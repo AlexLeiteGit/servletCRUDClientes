@@ -58,6 +58,7 @@ public class UnicaEntradaServlet extends HttpServlet {
 		}
 		
 		String[] tipoEEndereco = nome.split(":");
+		
 		if(tipoEEndereco[0].equals("forward")){
 			RequestDispatcher rd = request.getRequestDispatcher(tipoEEndereco[1]);
 			rd.forward(request, response);

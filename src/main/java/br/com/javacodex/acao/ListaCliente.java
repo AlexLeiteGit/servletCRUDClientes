@@ -27,6 +27,6 @@ public class ListaCliente {
 //		RequestDispatcher rd = request.getRequestDispatcher("/listaClientes.jsp");
 //		rd.forward(request, response);
 		
-		return "forward:listaClientes.jsp";
+		return "forward:listaCliente.jsp";
 	}
 }

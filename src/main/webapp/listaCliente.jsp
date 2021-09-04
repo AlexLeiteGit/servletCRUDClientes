@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Lista Cliente</title>
 </head>
 <body>
 
@@ -23,8 +23,8 @@ Lista de Clientes: <br/>
 <li>${cliente.sobrenome}</li>
 <li>${cliente.celular}</li>
 <li><fmt:formatDate value="${cliente.dataCadastro}" pattern="dd/MM/yyyy"/></li>
-<li><a href="/cadastro/entrada?acao=MostraCliente&id=${cliente.id}">editar</a></li>
-<li><a href="/cadastro/entrada?acao=RemoveCliente&id=${cliente.id}">remover</a></li>
+<li><a href="/servletCRUDClientes/entrada?acao=MostraCliente&id=${cliente.id}">editar</a></li>
+<li><a href="/servletCRUDClientes/entrada?acao=RemoveCliente&id=${cliente.id}">remover</a></li>
 </c:forEach>
 </ul>		
 </body>
