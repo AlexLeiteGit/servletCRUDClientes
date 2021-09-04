@@ -11,7 +11,7 @@ import br.com.javacodex.modelo.Cliente;
 
 public class AlteraCliente {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public String executa(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
 		String nomeCliente = request.getParameter("nome");
 		String sobrenomeCliente = request.getParameter("sobrenome");
@@ -29,7 +29,9 @@ public class AlteraCliente {
 		cliente.setIdade(idadeCliente);
 		cliente.setCelular(celularCliente);
 		
-		response.sendRedirect("entrada?acao=ListaCliente");
+//		response.sendRedirect("entrada?acao=ListaCliente");
+		
+		return "redirect:entrada?acao=ListaCliente";
 		
 	}
 

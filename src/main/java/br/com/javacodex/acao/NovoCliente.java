@@ -11,7 +11,7 @@ import br.com.javacodex.modelo.Cliente;
 
 public class NovoCliente {
 
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public String executa(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 		System.out.println("Cadastrando Novo Cliente!");
 		
@@ -44,7 +44,9 @@ public class NovoCliente {
 		request.setAttribute("cliente", cliente.getCelular());
 		request.setAttribute("cliente", cliente.getDataCadastro());
 		
-		response.sendRedirect("entrada?acao=ListaCliente");
+//		response.sendRedirect("entrada?acao=ListaCliente");
+		
+		return "redirect:entrada?acao=ListaCliente";
 		
 	}
 	

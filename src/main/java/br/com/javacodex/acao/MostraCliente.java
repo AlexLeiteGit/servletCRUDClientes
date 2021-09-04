@@ -13,7 +13,7 @@ import br.com.javacodex.modelo.Cliente;
 
 public class MostraCliente {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		System.out.println("mostrando cliente");
 		
@@ -25,11 +25,12 @@ public class MostraCliente {
 		
 		request.setAttribute("cliente", cliente);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/formAlteraCliente.jsp");
-		rd.forward(request, response);
+//		RequestDispatcher rd = request.getRequestDispatcher("/formAlteraCliente.jsp");
+//		rd.forward(request, response);
 		
 		System.out.println(cliente.getNome());
 		
+		return "forward:/formAlteraCliente.jsp";
 	}
 
 }

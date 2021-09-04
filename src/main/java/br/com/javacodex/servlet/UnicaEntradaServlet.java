@@ -40,21 +40,20 @@ public class UnicaEntradaServlet extends HttpServlet {
 			RemoveCliente acao = new RemoveCliente();
 			nome = acao.executa(request, response);
 			
-			
 		} else if(paramAcao.equals("MostraCliente")){			
 			
 			MostraCliente acao = new MostraCliente();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 			
 		} else if(paramAcao.equals("AlteraCliente")){		
 			
 			AlteraCliente acao = new AlteraCliente();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 		}
 			else if(paramAcao.equals("NovoCliente")){			
 			
 			NovoCliente acao = new NovoCliente();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 		}
 		
 		String[] tipoEEndereco = nome.split(":");

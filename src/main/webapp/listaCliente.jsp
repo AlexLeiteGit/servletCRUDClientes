@@ -21,6 +21,7 @@ Lista de Clientes: <br/>
 <c:forEach items="${cliente}" var="cliente">
 <li>${cliente.nome}</li>
 <li>${cliente.sobrenome}</li>
+<li>${cliente.idade}</li>
 <li>${cliente.celular}</li>
 <li><fmt:formatDate value="${cliente.dataCadastro}" pattern="dd/MM/yyyy"/></li>
 <li><a href="/servletCRUDClientes/entrada?acao=MostraCliente&id=${cliente.id}">editar</a></li>
