@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.javacodex.modelo.Banco;
 import br.com.javacodex.modelo.Cliente;
 
-public class AlteraCliente {
+public class AlteraCliente implements Acao{
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
@@ -28,8 +28,6 @@ public class AlteraCliente {
 		cliente.setSobrenome(sobrenomeCliente);
 		cliente.setIdade(idadeCliente);
 		cliente.setCelular(celularCliente);
-		
-//		response.sendRedirect("entrada?acao=ListaCliente");
 		
 		return "redirect:entrada?acao=ListaCliente";
 		

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.javacodex.modelo.Banco;
 import br.com.javacodex.modelo.Cliente;
 
-public class ListaCliente {
+public class ListaCliente implements Acao{
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -22,10 +22,6 @@ public class ListaCliente {
 		List<Cliente> lista = banco.getCliente();
 		
 		request.setAttribute("cliente", lista);
-		
-		//Migrado para o servlet UnicaEntradaServlet
-//		RequestDispatcher rd = request.getRequestDispatcher("/listaClientes.jsp");
-//		rd.forward(request, response);
 		
 		return "forward:listaCliente.jsp";
 	}

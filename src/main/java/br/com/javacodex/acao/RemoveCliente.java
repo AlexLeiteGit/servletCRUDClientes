@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.javacodex.modelo.Banco;
 
-public class RemoveCliente {
+public class RemoveCliente implements Acao{
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
@@ -19,10 +19,7 @@ public class RemoveCliente {
 		
 		Banco banco = new  Banco();
 		banco.removerCliente(id);
-		
-		// migrado pela o servlet UnicaEntradaServlet
-//		response.sendRedirect("entrada?acao=ListaCliente");
-		
+
 		System.out.println(id);
 		
 		return "redirect:entrada?acao=ListaCliente";

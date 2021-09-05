@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.javacodex.modelo.Banco;
 import br.com.javacodex.modelo.Cliente;
 
-public class MostraCliente {
+public class MostraCliente implements Acao{
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -24,9 +24,6 @@ public class MostraCliente {
 		Cliente cliente = banco.buscaClientePeloId(id);
 		
 		request.setAttribute("cliente", cliente);
-		
-//		RequestDispatcher rd = request.getRequestDispatcher("/formAlteraCliente.jsp");
-//		rd.forward(request, response);
 		
 		System.out.println(cliente.getNome());
 		

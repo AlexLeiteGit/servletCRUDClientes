@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.javacodex.modelo.Banco;
 import br.com.javacodex.modelo.Cliente;
 
-public class NovoCliente {
+public class NovoCliente implements Acao{
 
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
