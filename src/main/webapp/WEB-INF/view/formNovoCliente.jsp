@@ -13,6 +13,7 @@
 	
 		Nome: <input type="text" name="nome" />
 		Sobrenome: <input type="text" name="sobrenome" />
+		idade: <input type="text" name="idade" />
 		Celular: <input type="tel" name="celular" />
 		
 		<input type="hidden" name="acao" value="NovoCliente">

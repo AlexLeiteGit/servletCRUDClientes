@@ -30,7 +30,7 @@ public class MostraCliente {
 		
 		System.out.println(cliente.getNome());
 		
-		return "forward:/formAlteraCliente.jsp";
+		return "forward:formAlteraCliente.jsp";
 	}
 
 }

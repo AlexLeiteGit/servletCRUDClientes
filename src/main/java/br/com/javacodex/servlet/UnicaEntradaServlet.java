@@ -14,6 +14,7 @@ import br.com.javacodex.acao.AlteraCliente;
 import br.com.javacodex.acao.ListaCliente;
 import br.com.javacodex.acao.MostraCliente;
 import br.com.javacodex.acao.NovoCliente;
+import br.com.javacodex.acao.NovoClienteForm;
 import br.com.javacodex.acao.RemoveCliente;
 import br.com.javacodex.modelo.Banco;
 import br.com.javacodex.modelo.Cliente;
@@ -49,17 +50,21 @@ public class UnicaEntradaServlet extends HttpServlet {
 			
 			AlteraCliente acao = new AlteraCliente();
 			nome = acao.executa(request, response);
-		}
-			else if(paramAcao.equals("NovoCliente")){			
+		} else if(paramAcao.equals("NovoCliente")){			
 			
 			NovoCliente acao = new NovoCliente();
+			nome = acao.executa(request, response);
+			
+		} else if(paramAcao.equals("NovoClienteForm")){			
+			
+			NovoClienteForm acao = new NovoClienteForm();
 			nome = acao.executa(request, response);
 		}
 		
 		String[] tipoEEndereco = nome.split(":");
 		
 		if(tipoEEndereco[0].equals("forward")){
-			RequestDispatcher rd = request.getRequestDispatcher(tipoEEndereco[1]);
+			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/" + tipoEEndereco[1]);
 			rd.forward(request, response);
 		} else {
 			response.sendRedirect(tipoEEndereco[1]);
