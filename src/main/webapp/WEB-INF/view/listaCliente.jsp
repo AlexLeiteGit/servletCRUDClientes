@@ -12,10 +12,17 @@
 </head>
 <body>
 
-	<c:if test="${not empty cliente}">
-		Cliente ${cliente} cadastrado com sucesso!
-	</c:if>
+	Usuario Logado: ${usuarioLogado.login}
+	
+	<br>
+	<br>
+	<br>
 
+	<c:if test="${not empty cliente}">
+		Cliente ${ cliente } cadastrado com sucesso!
+	</c:if>
+<br>
+<br>
 Lista de Clientes: <br/>
 <ul>
 <c:forEach items="${cliente}" var="cliente">
