@@ -30,19 +30,31 @@ public class ClientesService extends HttpServlet {
 		
 		List<Cliente> clientes = new Banco().getCliente();
 		
-		XStream xstream = new XStream();
-		xstream.alias("cliente", Cliente.class);
-		String xml = xstream.toXML(clientes); 
-
-		response.setContentType("application/xml");
-		response.getWriter().print(xml);
-
+		String valor = request.getHeader("Accept");
 		
-//		Gson gson = new Gson();
-//		String json = gson.toJson(clientes);
-//		
-//		response.setContentType("application/json");
-//		response.getWriter().print(json);
+		if(valor.contains("xml")) {
+			
+			XStream xstream = new XStream();
+			xstream.alias("cliente", Cliente.class);
+			String xml = xstream.toXML(clientes); 
+	
+			response.setContentType("application/xml");
+			response.getWriter().print(xml);
+			
+		} else if(valor.contains("json")) {
+			
+			Gson gson = new Gson();
+			String json = gson.toJson(clientes);
+			
+			response.setContentType("application/json");
+			response.getWriter().print(json);
+			
+		} else {
+			
+			response.setContentType("application/json");
+			response.getWriter().print("{'message':'no content'}");
+			
+		}
 
 	}
 	
