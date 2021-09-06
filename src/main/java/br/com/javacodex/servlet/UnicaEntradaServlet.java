@@ -22,7 +22,7 @@ import br.com.javacodex.modelo.Banco;
 import br.com.javacodex.modelo.Cliente;
 
 
-@WebServlet("/entrada")
+//@WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -31,14 +31,14 @@ public class UnicaEntradaServlet extends HttpServlet {
 
 		String paramAcao = (String) request.getParameter("acao");
 		
-		HttpSession sessao = request.getSession();
-		boolean usuarioNaoEstaLogado = sessao.getAttribute("usuarioLogado") == null;
-		boolean ehUmaAcaoProtegida = !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
-		
-		if(ehUmaAcaoProtegida && usuarioNaoEstaLogado) {
-			response.sendRedirect("entrada?acao=LoginForm");
-			return;
-		}
+//		HttpSession sessao = request.getSession();
+//		boolean usuarioNaoEstaLogado = sessao.getAttribute("usuarioLogado") == null;
+//		boolean ehUmaAcaoProtegida = !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
+//		
+//		if(ehUmaAcaoProtegida && usuarioNaoEstaLogado) {
+//			response.sendRedirect("entrada?acao=LoginForm");
+//			return;
+//		}
 		
 		String nomeDaClasse = "br.com.javacodex.acao." + paramAcao;
 		
